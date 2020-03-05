@@ -37,9 +37,14 @@ import android.widget.Toast;
                     Toast.makeText(RegistrationActivity.this, "User Name is required", Toast.LENGTH_SHORT).show();
                 }
                 if(userEmail.equals("")){
+                    Toast.makeText(RegistrationActivity.this, "Email is required", Toast.LENGTH_SHORT).show();
+                }
+                if(userPass.equals("")){
                     Toast.makeText(RegistrationActivity.this, "Password is required", Toast.LENGTH_SHORT).show();
                 }
-//                if()
+                if(userConPass.equals("") || !userConPass.equals(userPass)){
+                    Toast.makeText(RegistrationActivity.this, "Please confirm the password", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
